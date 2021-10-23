@@ -1,4 +1,4 @@
-const startingMinutes20 = 0.2;
+const startingMinutes20 = 20;
 const startingMinutes50 = 0.4;
 let time20 = startingMinutes20 * 60;
 var time = true;
