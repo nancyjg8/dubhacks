@@ -15,6 +15,6 @@ function updateCountdown() {
     time--;
 
     if(time == 0) {
-        clearInterval(myVar);
+        setInterval(updateCountdown, 1000);
     }
 }
