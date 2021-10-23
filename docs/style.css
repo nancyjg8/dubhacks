@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+
 body {
     font-family: 'Orelega One', cursive;
-    background-color: 	#6a5acd;
+    background-color: 	#ffccc;
     text-align: center;
-    color: #ffccc;
+    color: #daa520;
     font-size: 30px;
 }
