@@ -19,8 +19,10 @@ function updateCountdown20() {
     if(time20 == 0) {
         if(time){
             time20 = startingMinutes20 * 60;
+            time = false;
         } else{
             time20 = startingMinutes50 * 60;
+            time = true;
         }
 
     }
