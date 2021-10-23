@@ -1,7 +1,7 @@
 const startingMinutes = 20;
 let time = startingMinutes * 60;
 
-const countdownEl = document.getElementById('countdown');
+const countdownEl = document.getElementById('20-min-countdown');
 
 setInterval(updateCountdown, 1000);
 
