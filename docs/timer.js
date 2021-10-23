@@ -5,7 +5,7 @@ let time20 = startingMinutes20 * 60;
 const countdownEl = document.getElementById('20-min-countdown');
 
 function updateCountdown20() {
-    Boolean time = true;
+    var time = true;
     const minutes = Math.floor(time20 / 60);
     let seconds = time20 % 60;
 
