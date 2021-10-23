@@ -42,7 +42,7 @@ function displayPreviousImage() {
 }
 
 function startTimer() {
-    setInterval(displayNextImage, minute * 0.2);
+    setInterval(displayNextImage, time20 * 0.05);
 }
 
 var minute = 3000 * 60;
