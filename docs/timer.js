@@ -1,11 +1,11 @@
 const startingMinutes20 = 0.2;
 const startingMinutes50 = 0.4;
 let time20 = startingMinutes20 * 60;
+var time = true;
 
 const countdownEl = document.getElementById('20-min-countdown');
 
 function updateCountdown20() {
-    var time = true;
     const minutes = Math.floor(time20 / 60);
     let seconds = time20 % 60;
 
