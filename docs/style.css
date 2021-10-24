@@ -20,3 +20,10 @@ nav a {
     margin: auto;
     text-align: center;
 }
+
+
+.reason div{
+    font-size: 12pt;
+    text-align: left;
+    text-indent: 48px;
+}
