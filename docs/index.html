@@ -37,20 +37,21 @@
 <head>
     <title>change picture</title>
     <script type = "text/javascript">
+
         function displayNextImage() {
-            x = (x === images.length - 1) ? 0 : x + 1;
+            x = (x === 3 - 1) ? 0 : x + 1;
             document.getElementById("img").src = images[x];
         }
 
         function startTimer() {
-            setInterval(displayNextImage, 60000);
+            setInterval(displayNextImage, 3000);
         }
 
-        var minute = 3000 * 60;
         var images = [], x = -1;
         images[0] = "pic_1.jpg";
         images[1] = "pic_2.jpg";
         images[2] = "pic_3.jpg";
+
     </script>
 </head>
 
