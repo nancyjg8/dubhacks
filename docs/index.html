@@ -19,8 +19,6 @@
     <!--This is our header-->
     <p id="20-min-countdown"></p>
     <script src="timer.js"></script>
-    <p id="50-min-countdown"></p>
-    <script src="timer2.js"></script>
     <header>
         <section>
             <!--Navigation Bar-->
@@ -35,8 +33,37 @@
     </header>
 </body>
 
+<!--changing pictures -->
+<head>
+    <title>change picture</title>
+    <script type = "text/javascript">
+        function displayNextImage() {
+            x = (x === images.length - 1) ? 0 : x + 1;
+            document.getElementById("img").src = images[x];
+        }
+
+        function startTimer() {
+            setInterval(displayNextImage, 60000);
+        }
+
+        var minute = 3000 * 60;
+        var images = [], x = -1;
+        images[0] = "pic_1.jpg";
+        images[1] = "pic_2.jpg";
+        images[2] = "pic_3.jpg";
+    </script>
+</head>
+
+<body onload = "startTimer()">
+<img id="img" src="pic_3.jpg"/>
+</body>
+
 <footer>
-    <!--add creators names & copyright-->
+    <div class="footer">
+        <p>
+            &#169; 2021
+        </p>
+    </div>
 </footer>
 
 </html>

@@ -4,6 +4,17 @@ body {
     font-family: 'Orelega One', cursive;
     background-color: #ffc0cb;
     text-align: center;
-    color: #008000;
+    color: #FFFFFF;
     font-size: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-size: 30px;
+    padding: 20px 70px;
+    display: inline-block;
+    margin: auto;
+    text-align: center;
 }

@@ -1,16 +1,32 @@
-const startingMinutes = 20;
-let time = startingMinutes * 60;
+const startingMinutes20 = 20;
+const startingMinutes50 = 50;
+let time20 = startingMinutes20 * 60;
+var time = true;
 
 const countdownEl = document.getElementById('20-min-countdown');
 
-setInterval(updateCountdown, 1000);
-
-function updateCountdown() {
-    const minutes = Math.floor(time / 60);
-    let seconds = time % 60;
+function updateCountdown20() {
+    const minutes = Math.floor(time20 / 60);
+    let seconds = time20 % 60;
 
     seconds = seconds < 10 ? '0' + seconds : seconds;
 
     countdownEl.innerHTML = `${minutes}:${seconds}`;
-    time--;
+    time20--;
+
+    time20 = time20 < 0 ? 0 : time20;
+
+    if(time20 == 0) {
+        if(time){
+            time20 = startingMinutes50 * 60;
+            time = false;
+        } else{
+            time20 = startingMinutes20 * 60;
+            time = true;
+        }
+
+    }
 }
+
+setInterval(updateCountdown20, 1000);
+updateCountdown20();
