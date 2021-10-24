@@ -42,11 +42,8 @@
         var REFRESH_RATE = 1000;
 
         function displayNextImage() {
-            console.log(x);
-            console.log(elapsed_seconds);
             var should_reset = false;
             if (elapsed_seconds >= images[x]["delay"] * 60000) {
-                console.log("UPDATED");
                 should_reset = x === images.length - 1;
                 x = should_reset ? 0 : x + 1;
                 document.getElementById("img").src = images[x]["src"];
@@ -83,6 +80,26 @@
         images[17] = {"src": "f8.png", "delay": 60};
         images[18] = {"src": "f9.png", "delay": 65};
         images[19] = {"src": "f10.png", "delay": 70};
+        images[20] = {"src": "oddishsprite0.gif", "delay": 72};
+        images[21] = {"src": "oddishsprite2.gif", "delay": 74};
+        images[22] = {"src": "oddishsprite3.gif", "delay": 76};
+        images[23] = {"src": "oddishsprite4.gif", "delay": 78};
+        images[24] = {"src": "oddishsprite5.gif", "delay": 80};
+        images[25] = {"src": "oddishsprite6.gif", "delay": 82};
+        images[26] = {"src": "oddishsprite7.gif", "delay": 84};
+        images[27] = {"src": "oddishsprite9.gif", "delay": 86};
+        images[28] = {"src": "oddishsprite10.gif", "delay": 88};
+        images[29] = {"src": "oddishsprite11.gif", "delay": 90};
+        images[30] = {"src": "plant0.png", "delay": 95};
+        images[31] = {"src": "plant1.png", "delay": 100};
+        images[32] = {"src": "plant2.png", "delay": 105};
+        images[33] = {"src": "plant3.png", "delay": 110};
+        images[34] = {"src": "plant4.png", "delay": 115};
+        images[35] = {"src": "plant5.png", "delay": 120};
+        images[36] = {"src": "plant6.png", "delay": 125};
+        images[37] = {"src": "plant7.png", "delay": 130};
+        images[38] = {"src": "plant8.png", "delay": 135};
+        images[39] = {"src": "plant9.png", "delay": 140};
     </script>
 </head>
 
