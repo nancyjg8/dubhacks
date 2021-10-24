@@ -1,5 +1,5 @@
 const startingMinutes20 = 20;
-const startingMinutes50 = 0.4;
+const startingMinutes50 = 50;
 let time20 = startingMinutes20 * 60;
 var time = true;
 
@@ -30,23 +30,3 @@ function updateCountdown20() {
 
 setInterval(updateCountdown20, 1000);
 updateCountdown20();
-
-function displayNextImage() {
-    x = (x === images.length - 1) ? 0 : x + 1;
-    document.getElementById("img").src = images[x];
-}
-
-function displayPreviousImage() {
-    x = (x <= 0) ? images.length - 1 : x - 1;
-    document.getElementById("img").src = images[x];
-}
-
-function startTimer() {
-    setInterval(displayNextImage, time20 * 0.1);
-}
-
-var minute = 3000 * 60;
-var images = [], x = -1;
-images[0] = "https://cdn2.bulbagarden.net/upload/1/14/White_2_EN_boxart.png";
-images[1] = "https://cdn2.bulbagarden.net/upload/7/78/194Wooper.png";
-images[2] = "https://cdn2.bulbagarden.net/upload/2/21/001Bulbasaur.png";
