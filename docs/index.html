@@ -38,25 +38,46 @@
     <title>change picture</title>
     <script type = "text/javascript">
 
+        var x = 0;
+        var elapsed_seconds = 0;
+        var REFRESH_RATE = 1000;
+
         function displayNextImage() {
-            x = (x === 3 - 1) ? 0 : x + 1;
-            document.getElementById("img").src = images[x];
+            console.log(x);
+            console.log(elapsed_seconds);
+            var should_reset = false;
+            if (elapsed_seconds >= images[x]["delay"] * 1000) {
+                should_reset = x === images.length - 1;
+                x = should_reset ? 0 : x + 1;
+                document.getElementById("img").src = images[x]["src"];
+            }
+
+            elapsed_seconds += REFRESH_RATE;
+            if (should_reset) {
+                elapsed_seconds= 0;
+            }
         }
 
         function startTimer() {
-            setInterval(displayNextImage, 3000);
+            setInterval(displayNextImage, REFRESH_RATE);
         }
 
-        var images = [], x = -1;
-        images[0] = "pic_1.jpg";
-        images[1] = "pic_2.jpg";
-        images[2] = "pic_3.jpg";
-
+        var images = [];
+        images[0] = {"src": "oddishsprite0.gif", "delay": 1};
+        images[1] = {"src": "oddishsprite2.gif", "delay": 2};
+        images[2] = {"src": "oddishsprite3.gif", "delay": 3};
+        images[3] = {"src": "oddishsprite4.gif", "delay": 4};
+        images[4] = {"src": "oddishsprite5.gif", "delay": 5};
+        images[5] = {"src": "oddishsprite6.gif", "delay": 10};
+        images[6] = {"src": "oddishsprite7.gif", "delay": 15};
+        images[7] = {"src": "oddishsprite9.gif", "delay": 20};
+        images[8] = {"src": "oddishsprite10.gif", "delay": 25};
+        images[9] = {"src": "oddishsprite11.gif", "delay": 30};
     </script>
 </head>
 
 <body onload = "startTimer()">
-<img id="img" src="pic_3.jpg"/>
+<img id="img" src="oddishsprite0.gif"/>
 </body>
 
 
