@@ -2,17 +2,15 @@
 
 body {
     font-family: 'Orelega One', cursive;
-    /* background-color: #ffc0cb; */
     background-color: #88A17B;
-
     text-align: center;
     color: #FFFFFF;
     font-size: 30px;
 }
 
-a:link {
+a:link, a:active, a:visited {
+    color: #FFFFFF;
     text-decoration: none;
-    text-decoration-color: #FFFFFF;
 }
 
 nav a {
@@ -25,7 +23,6 @@ nav a {
     margin: auto;
     text-align: center;
 }
-
 
 .reason div{
     font-size: 12pt;
