@@ -47,6 +47,7 @@
             console.log(elapsed_seconds);
             var should_reset = false;
             if (elapsed_seconds >= images[x]["delay"] * 1000) {
+                console.log("UPDATED");
                 should_reset = x === images.length - 1;
                 x = should_reset ? 0 : x + 1;
                 document.getElementById("img").src = images[x]["src"];
@@ -63,16 +64,26 @@
         }
 
         var images = [];
-        images[0] = {"src": "oddishsprite0.gif", "delay": 1};
-        images[1] = {"src": "oddishsprite2.gif", "delay": 2};
-        images[2] = {"src": "oddishsprite3.gif", "delay": 3};
-        images[3] = {"src": "oddishsprite4.gif", "delay": 4};
-        images[4] = {"src": "oddishsprite5.gif", "delay": 5};
-        images[5] = {"src": "oddishsprite6.gif", "delay": 10};
-        images[6] = {"src": "oddishsprite7.gif", "delay": 15};
-        images[7] = {"src": "oddishsprite9.gif", "delay": 20};
-        images[8] = {"src": "oddishsprite10.gif", "delay": 25};
-        images[9] = {"src": "oddishsprite11.gif", "delay": 30};
+        images[0] = {"src": "oddishsprite0.gif", "delay": 0};
+        images[1] = {"src": "oddishsprite2.gif", "delay": 1};
+        images[2] = {"src": "oddishsprite3.gif", "delay": 2};
+        images[3] = {"src": "oddishsprite4.gif", "delay": 3};
+        images[4] = {"src": "oddishsprite5.gif", "delay": 4};
+        images[5] = {"src": "oddishsprite6.gif", "delay": 5};
+        images[6] = {"src": "oddishsprite7.gif", "delay": 6};
+        images[7] = {"src": "oddishsprite9.gif", "delay": 7};
+        images[8] = {"src": "oddishsprite10.gif", "delay": 8};
+        images[9] = {"src": "oddishsprite11.gif", "delay": 9};
+        images[10] = {"src": "f1.png", "delay": 14};
+        images[11] = {"src": "f2.png", "delay": 19};
+        images[12] = {"src": "f3.png", "delay": 24};
+        images[13] = {"src": "f4.png", "delay": 29};
+        images[14] = {"src": "f5.png", "delay": 34};
+        images[15] = {"src": "f6.png", "delay": 39};
+        images[16] = {"src": "f7.png", "delay": 44};
+        images[17] = {"src": "f8.png", "delay": 49};
+        images[18] = {"src": "f9.png", "delay": 54};
+        images[19] = {"src": "f10.png", "delay": 59};
     </script>
 </head>
 
@@ -80,53 +91,6 @@
 <img id="img" src="oddishsprite0.gif"/>
 </body>
 
-
-<!--changing pictures -->
-<head>
-    <title>change picture</title>
-    <script type = "text/javascript">
-
-        var x = 0;
-        var elapsed_seconds = 0;
-        var REFRESH_RATE = 1000;
-
-        function displayNextImage() {
-            console.log(x);
-            console.log(elapsed_seconds);
-            var should_reset = false;
-            if (elapsed_seconds >= images2[x]["delay"] * 1000) {
-                should_reset = x === images2.length - 1;
-                x = should_reset ? 0 : x + 1;
-                document.getElementById("img2").src = images2[x]["src"];
-            }
-
-            elapsed_seconds += REFRESH_RATE;
-            if (should_reset) {
-                elapsed_seconds= 0;
-            }
-        }
-
-        function startTimer() {
-            setInterval(displayNextImage, REFRESH_RATE);
-        }
-
-        var images2 = [];
-        images2[0] = {"src": "f1.png", "delay": 1};
-        images2[1] = {"src": "f2.png", "delay": 2};
-        images2[2] = {"src": "f3.png", "delay": 3};
-        images2[3] = {"src": "f4.png", "delay": 4};
-        images2[4] = {"src": "f5.png", "delay": 5};
-        images2[5] = {"src": "f6.png", "delay": 10};
-        images2[6] = {"src": "f7.png", "delay": 15};
-        images2[7] = {"src": "f8.png", "delay": 20};
-        images2[8] = {"src": "f9.png", "delay": 25};
-        images2[9] = {"src": "f10.png", "delay": 30};
-    </script>
-</head>
-
-<body onload = "startTimer()">
-<img id="img2" src="flower-1.jpg"/>
-</body>
 
 
 
