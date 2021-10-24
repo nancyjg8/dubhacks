@@ -81,7 +81,52 @@
 </body>
 
 
+<!--changing pictures -->
+<head>
+    <title>change picture</title>
+    <script type = "text/javascript">
 
+        var x = 0;
+        var elapsed_seconds = 0;
+        var REFRESH_RATE = 1000;
+
+        function displayNextImage() {
+            console.log(x);
+            console.log(elapsed_seconds);
+            var should_reset = false;
+            if (elapsed_seconds >= images2[x]["delay"] * 1000) {
+                should_reset = x === images2.length - 1;
+                x = should_reset ? 0 : x + 1;
+                document.getElementById("img2").src = images2[x]["src"];
+            }
+
+            elapsed_seconds += REFRESH_RATE;
+            if (should_reset) {
+                elapsed_seconds= 0;
+            }
+        }
+
+        function startTimer() {
+            setInterval(displayNextImage, REFRESH_RATE);
+        }
+
+        var images2 = [];
+        images2[0] = {"src": "flower-1.jpg", "delay": 1};
+        images2[1] = {"src": "flower-2.jpg", "delay": 2};
+        images2[2] = {"src": "flower-3.jpg", "delay": 3};
+        images2[3] = {"src": "flower-4.jpg", "delay": 4};
+        images2[4] = {"src": "flower-5.jpg", "delay": 5};
+        images2[5] = {"src": "flower-6.jpg", "delay": 10};
+        images2[6] = {"src": "flower-7.jpg", "delay": 15};
+        images2[7] = {"src": "flower-8.jpg", "delay": 20};
+        images2[8] = {"src": "flower-9.jpg", "delay": 25};
+        images2[9] = {"src": "flower-10.jpg", "delay": 30};
+    </script>
+</head>
+
+<body onload = "startTimer()">
+<img id="img2" src="flower-1.jpg"/>
+</body>
 
 
 
