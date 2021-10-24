@@ -45,7 +45,7 @@
             console.log(x);
             console.log(elapsed_seconds);
             var should_reset = false;
-            if (elapsed_seconds >= images[x]["delay"] * 1000) {
+            if (elapsed_seconds >= images[x]["delay"] * 60000) {
                 console.log("UPDATED");
                 should_reset = x === images.length - 1;
                 x = should_reset ? 0 : x + 1;
